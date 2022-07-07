@@ -9,12 +9,12 @@ from useragent import header
 proxyPort=9050
 ctrlPort=9051
 referer= ["https://ask.com", "https://mobilelegends.com", "https://www.nasa.gov", "https://deepmind.com", "https://tokopedia.com", "https://bukalapak.com", "https://lazada.com", "https://alibaba.com", "https://www.dpr.go.id", "https://www.mpr.go.id"]
-site = input("ketikkan alamat blog (misal: http://link.com) : ")
-jumlah = input("jumlah viewnya  : ")
+site = input("URL (ex: http://example.com) : ")
+jumlah = input("Number View  : ")
 jumlah =int(jumlah)
 def run(i):
-     tr.reset_identity()
-     response = tr.get(site, headers={"User-Agent": random.choice(header),"Referer":random.choice(referer) })
+     requests.get(site, headers={"User-Agent": random.choice(header),"Referer":random.choice(referer) })
+     #response = tr.get(site, headers={"User-Agent": random.choice(header),"Referer":random.choice(referer) })
      print("View +", (i+1))
 
 if __name__ == '__main__':
