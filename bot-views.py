@@ -2,8 +2,6 @@ import requests
 import time
 import sys
 import random
-
-from torrequest import TorRequest
 from useragent import header
 
 proxyPort=9050
@@ -14,12 +12,7 @@ jumlah = input("Number View  : ")
 jumlah =int(jumlah)
 def run(i):
      requests.get(site, headers={"User-Agent": random.choice(header),"Referer":random.choice(referer) })
-     #response = tr.get(site, headers={"User-Agent": random.choice(header),"Referer":random.choice(referer) })
      print("View +", (i+1))
 
-if __name__ == '__main__':
-	if len(sys.argv) > 3:
-	   if sys.argv[1] and sys.argv[2]:proxyPort=sys.argv[1];ctrlPort=sys.argv[2]
-	with TorRequest(proxy_port=proxyPort, ctrl_port=ctrlPort, password=None) as tr:
-	    for i in range(jumlah):run(i)
+for i in range(jumlah):run(i)
 		
