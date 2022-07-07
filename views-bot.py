@@ -13,11 +13,9 @@ url = input("Url blog (ex: http://example.com) : ")
 view = input("Number View : ")
 view =int(view)
 def run(i):
-
-     response = request.get(url, headers={"User-Agent": random.choice(header),"Referer":random.choice(referer)})
      #using torrequest
-#    tr.resetidentity()
-#    response = tr.get(site, headers={"User-Agent": random.choice(header),"Referer":random.choice(referer)})
+     #tr.resetidentity()
+     response = tr.get(site, headers={"User-Agent": random.choice(header),"Referer":random.choice(referer)})
      print("View +", (i+1)-i)
 
 if __name__ == '__main__':
