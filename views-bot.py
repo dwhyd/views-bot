@@ -15,7 +15,7 @@ view =int(view)
 def run(i):
      #using torrequest
      #tr.resetidentity()
-     response = tr.get(site, headers={"User-Agent": random.choice(header),"Referer":random.choice(referer)})
+     response = tr.get(url, headers={"User-Agent": random.choice(header),"Referer":random.choice(referer)})
      print("View +", (i+1)-i)
 
 if __name__ == '__main__':
